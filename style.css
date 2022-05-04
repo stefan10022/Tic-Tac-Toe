@@ -1,0 +1,103 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 0;
+  color: #2D3047;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  outline: 1px solid #2D3047;
+  margin-bottom: 30px;
+}
+
+.space .inner {
+  height: 100px;
+  width: 100px;
+  border: 2px solid #2D3047;
+  text-align: center;
+  line-height: 100px;
+  font-size: 90px;
+  cursor: default;
+}
+
+.popup {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.popup .content {
+  flex-basis: auto;
+  background-color: #0D5D56;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 50px 100px;
+  font-size: 40px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative;
+}
+
+.popup .icon {
+  width: 45px;
+  height: 45px;
+  line-height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 4%;
+  left: 2%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.popup .icon:hover {
+  background-color: white;
+  color: #0D5D56;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.new-game {
+  background-color: #2D3047;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.new-game:active {
+    background-color: #484b68;
+}
+
